@@ -10,7 +10,7 @@ const Stocks = (props) => {
                 const stockChange = Math.round(change * 1000)/1000;
                 return (
                     <Link to = {`/price/${symbol}`}>
-                        <h2>{name} ({symbol}) {lastPrice} {stockChange}</h2>
+                        <h2>{name} ({symbol}) </h2>
                     </Link>
                 )
             })}
