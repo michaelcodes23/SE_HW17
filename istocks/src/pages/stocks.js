@@ -9,7 +9,7 @@ const Stocks = (props) => {
                 const {name, lastPrice, symbol, change} = stocks;
                 const stockChange = Math.round(change * 1000)/1000;
                 return (
-                    <Link to = {`/stocks/${symbol}`}>
+                    <Link to = {`/price/${symbol}`}>
                         <h2>{name} ({symbol}) {lastPrice} {stockChange}</h2>
                     </Link>
                 )

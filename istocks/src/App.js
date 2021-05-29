@@ -1,12 +1,12 @@
 
 import React from 'react';
 import './App.css';
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom';
 import Nav from './components/Nav';
 import About from './pages/about';
-import Stocks from './pages/stocks'
-import Price from './pages/price'
-import Main from './pages/main'
+import Stocks from './pages/stocks';
+import Price from './pages/price';
+import Main from './pages/main';
 
 function App() {
   return (
@@ -21,10 +21,9 @@ function App() {
         <Route path='/stocks'>
           <Stocks />
         </Route>
-        {/* <Route path ='/stocks/:symbol'
-        render = {(routerProps) => <Price {...routerProps}/>}
-        /> */}
-        <Route exact path='/'>
+        <Route path ='/price/:symbol'
+           render={(routerProps) => <Price {...routerProps} /> } />
+        <Route path='/'>
           <Main />
         </Route>
       </Switch>
